@@ -11,7 +11,7 @@
     {
         <tr>
             <td>@item.Name</td>
-            <td>@item.Amount VNĐ</td>
+            <td>@item.Amount.ToString("N0") VNĐ</td>
             <td>@item.Deadline.ToShortDateString()</td>
         </tr>
     }
