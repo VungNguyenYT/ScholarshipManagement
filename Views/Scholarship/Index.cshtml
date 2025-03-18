@@ -1,18 +1,27 @@
 ﻿@model List<Scholarship>
 
-    <h2>Danh sách học bổng</h2>
-    <table class="table">
-        <tr>
-            <th>Tên học bổng</th>
-            <th>Số tiền hỗ trợ</th>
-            <th>Hạn đăng ký</th>
-        </tr>
-        @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.Name</td>
-            <td>@item.Amount.ToString("N0") VNĐ</td>
-            <td>@item.Deadline.ToShortDateString()</td>
-        </tr>
+    @{
+    ViewData["Title"] = "Danh sách Học bổng";
     }
-    </table>
+
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Danh sách Học bổng</h2>
+
+        <div class="row">
+            @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="card shadow-lg mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text">
+                            <strong>Số tiền hỗ trợ:</strong> @item.Amount.ToString("N0") VNĐ <br>
+                            <strong>Hạn đăng ký:</strong> @item.Deadline.ToShortDateString()
+                        </p>
+                        <a href="@Url.Action("Apply", "Scholarship", new { id = item.ScholarshipID })" class="btn btn-primary">Đăng ký ngay</a>
+                    </div>
+                </div>
+            </div>
+        }
+        </div>
+    </div>

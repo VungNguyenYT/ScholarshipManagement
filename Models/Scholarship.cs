@@ -9,10 +9,10 @@ namespace ScholarshipManagement.Models
 
         [Required(ErrorMessage = "Tên học bổng không được để trống")]
         [StringLength(255)]
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Vui lòng nhập mô tả học bổng")]
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Số tiền hỗ trợ không được để trống")]
         [Range(100000, 100000000, ErrorMessage = "Số tiền phải từ 100,000 đến 100,000,000")]
