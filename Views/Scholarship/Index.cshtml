@@ -1,0 +1,18 @@
+﻿@model List<Scholarship>
+
+    <h2>Danh sách học bổng</h2>
+    <table class="table">
+        <tr>
+            <th>Tên học bổng</th>
+            <th>Số tiền hỗ trợ</th>
+            <th>Hạn đăng ký</th>
+        </tr>
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Amount VNĐ</td>
+            <td>@item.Deadline.ToShortDateString()</td>
+        </tr>
+    }
+    </table>
