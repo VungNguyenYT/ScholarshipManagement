@@ -1,8 +1,53 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@*@{
+        ViewData["Title"] = "Home Page";
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ - TVU</title>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif;">
+    <!-- Header -->
+    <div style="background-color: red; color: white; padding: 10px; text-align: center;">
+        <span>Email: phongcongtacsv@tvu.edu.vn | Giờ làm việc: 07:00 - 11:00; 13:00 - 17:00 | Hotline: 02943.855.735</span>
+    </div>
+
+    <!-- Logo & Navigation -->
+    <div style="display: flex; align-items: center; padding: 10px; background-color: white;">
+        <img src="logo.png" alt="Logo TVU" style="height: 50px; margin-left: 20px;">
+        <div style="margin-left: auto; margin-right: 20px;">
+            <input type="text" placeholder="Từ khóa tìm kiếm..." style="padding: 5px; width: 200px;">
+            <button style="padding: 5px;">🔍</button>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div style="display: flex; background-color: #fff; border-bottom: 2px solid #f0f0f0; justify-content: center;">
+        <a href="#" style="padding: 15px 20px; color: black; text-decoration: none; background-color: orange; font-weight: bold;">TRANG CHỦ</a>
+        <a href="#" style="padding: 15px 20px; color: black; text-decoration: none;">GIỚI THIỆU</a>
+        <a href="#" style="padding: 15px 20px; color: black; text-decoration: none;">SỔ TAY SV</a>
+        <a href="#" style="padding: 15px 20px; color: black; text-decoration: none;">SINH VIÊN</a>
+        <a href="#" style="padding: 15px 20px; color: black; text-decoration: none;">TÂN SV</a>
+        <a href="#" style="padding: 15px 20px; color: black; text-decoration: none;">CỰU SV</a>
+    </div>
+
+    <!-- Banner -->
+    <div style="text-align: center; margin-top: 10px;">
+        <img src="banner.jpg" alt="Trường Đại Học Trà Vinh" style="width: 80%; max-width: 900px;">
+    </div>
+
+    <!-- Floating Buttons -->
+    <div style="position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px;">
+        <button style="background-color: blue; color: white; border: none; padding: 10px; border-radius: 50%;">💬</button>
+        <button style="background-color: #0084ff; color: white; border: none; padding: 10px; border-radius: 50%;">📞</button>
+    </div>
+</body>
+</html>
